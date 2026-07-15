@@ -1,4 +1,4 @@
-# Conditions — Deuteration and SANS Simulation
+# Conditions : Deuteration and SANS Simulation
 
 ## Protein
 

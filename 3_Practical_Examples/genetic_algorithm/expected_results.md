@@ -1,41 +1,26 @@
-# Expected Results — Genetic Algorithm
+# Expected Results : Genetic Algorithm
 
 ## Generated files
 
 After GA execution, the following folders are created:
 
-- `gfp_clean_deuterated_pdbs/` — one PDB per chromosome and per generation
-- `gfp_clean_primus_out/` — simulated SANS curves (.dat) and ref/ folder
-- `gfp_clean_final_results/` — best solution and fitness history
-  - `best_solution_summary.csv`
-  - `best_fitness_summary.csv`
+- `gfp_deuterated_pdbs/` : one PDB per chromosome and per generation
+- `gfp_primus_out/` : simulated SANS curves (.dat) and ref/ folder
+- `gfp_final_results/` : best solution and fitness history
+  - `gfp_best_fitness.csv`
 
 ## Reading the best genome
 
-The file `best_solution_summary.csv` contains:
+The file `gfp_best_fitness.csv` contains:
 
 - `generation`, `index`: generation and number of the best chromosome
-- `d2o`: optimal D2O percentage
-- `deut_count`: number of deuterated AAs (genes set to True)
 - `fitness`: final fitness score
+- `d2o_percent`: optimal D2O percentage
+- `n_deuterated_aa`: number of deuterated AAs (genes set to True)
 - `ratio`: Imax/background ratio
-- Columns per AA (18 effective + linked pairs): True/False
+- `%D`, `%Non_labile_D%` : Percentage of total deuterium and non labile deuterium
+- `deuterated_aa_list` : List of the deuterated AA
 
-Example interpretation:
-
-- If the column `ASN+ASP` is `True`, both ASN and ASP residues are deuterated together.
-- If `d2o = 42`, the optimal solvent is 42% D2O.
-- If `fitness` increases across generations, the GA converges toward an informative pattern.
-
-## Convergence plot interpretation
-
-`best_fitness_summary.csv` contains the generation-by-generation history:
-
-- `best_fitness`: best fitness at each generation
-- `best_d2o`: D2O of the best individual
-- `best_deut_count`: number of deuterated AAs
-
-A curve that rises quickly then stabilizes indicates good convergence. If it stagnates, increase the population size or the number of generations.
 
 ## Quick troubleshooting
 

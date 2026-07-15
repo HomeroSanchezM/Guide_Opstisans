@@ -1,17 +1,17 @@
-# Conditions — Genetic Algorithm
+# Conditions : Genetic Algorithm
 
 ## Protein
 
-- Input file: `gfp_clean.pdb`
+- Input file: `data/gfp.pdb`
 - All hydrogens must be explicit and protonated.
 
 ## GA parameters
 
 | Parameter | Value |
 |-----------|--------|
-| Population size | `30` (multiple of 3) |
-| Elitism | `5` (<= population/3) |
-| Generations | `30` (short for the tutorial) |
+| Population size | `60` (multiple of 3) |
+| Elitism | `10` (<= population/3) |
+| Generations | `50` (short for the tutorial) |
 | D2O variation rate | `5` (not used because D2O is locked) |
 | Seed | `42` |
 | Explored D2O | `0`, `42`, `100` |
