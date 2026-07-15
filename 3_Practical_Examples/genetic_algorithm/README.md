@@ -33,7 +33,7 @@ Files produced in `<pdb_stem>_final_results/`:
 Display the summary:
 
 ```bash
-cat gfp_final_results/gfo_best_fitness.csv
+cat gfp_final_results/gfp_best_fitness.csv
 ```
 
 ## Expected results
